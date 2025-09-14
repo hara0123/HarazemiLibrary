@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GetCOMPortInfo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7a9850c091e7a3a0398b1ffce8666ff430fa4b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("GetCOMPortInfo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GetCOMPortInfo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

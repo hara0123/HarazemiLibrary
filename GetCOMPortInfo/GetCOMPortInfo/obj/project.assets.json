@@ -1835,11 +1835,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\Users\\hara\\Dev\\Projects\\VS2022\\GetCOMPortInfo\\GetCOMPortInfo\\GetCOMPortInfo.csproj",
+      "projectUniqueName": "U:\\Users\\hara\\Dev\\ZemiLib\\unified-repo\\GetCOMPortInfo\\GetCOMPortInfo\\GetCOMPortInfo.csproj",
       "projectName": "GetCOMPortInfo",
-      "projectPath": "U:\\Users\\hara\\Dev\\Projects\\VS2022\\GetCOMPortInfo\\GetCOMPortInfo\\GetCOMPortInfo.csproj",
+      "projectPath": "U:\\Users\\hara\\Dev\\ZemiLib\\unified-repo\\GetCOMPortInfo\\GetCOMPortInfo\\GetCOMPortInfo.csproj",
       "packagesPath": "C:\\Users\\harah\\.nuget\\packages\\",
-      "outputPath": "U:\\Users\\hara\\Dev\\Projects\\VS2022\\GetCOMPortInfo\\GetCOMPortInfo\\obj\\",
+      "outputPath": "U:\\Users\\hara\\Dev\\ZemiLib\\unified-repo\\GetCOMPortInfo\\GetCOMPortInfo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

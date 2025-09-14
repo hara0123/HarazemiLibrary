@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4u2PT3+mpGo=",
+  "dgSpecHash": "Ivj6UR+FinA=",
   "success": true,
-  "projectFilePath": "U:\\Users\\hara\\Dev\\Projects\\VS2022\\GetCOMPortInfo\\GetCOMPortInfo\\GetCOMPortInfo.csproj",
+  "projectFilePath": "U:\\Users\\hara\\Dev\\ZemiLib\\unified-repo\\GetCOMPortInfo\\GetCOMPortInfo\\GetCOMPortInfo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\harah\\.nuget\\packages\\runtime.android-arm.runtime.native.system.io.ports\\9.0.9\\runtime.android-arm.runtime.native.system.io.ports.9.0.9.nupkg.sha512",
     "C:\\Users\\harah\\.nuget\\packages\\runtime.android-arm64.runtime.native.system.io.ports\\9.0.9\\runtime.android-arm64.runtime.native.system.io.ports.9.0.9.nupkg.sha512",

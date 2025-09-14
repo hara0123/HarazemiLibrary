@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "U:\\Users\\hara\\Dev\\Projects\\VS2022\\GetCOMPortInfo\\",
+  "WorkspaceRootPath": "U:\\Users\\hara\\Dev\\ZemiLib\\unified-repo\\GetCOMPortInfo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C0B14D0-0DB7-4AB3-8E6D-4CF927E12C34}|GetCOMPortInfo\\GetCOMPortInfo.csproj|u:\\users\\hara\\dev\\projects\\vs2022\\getcomportinfo\\getcomportinfo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C0B14D0-0DB7-4AB3-8E6D-4CF927E12C34}|GetCOMPortInfo\\GetCOMPortInfo.csproj|u:\\users\\hara\\dev\\zemilib\\unified-repo\\getcomportinfo\\getcomportinfo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C0B14D0-0DB7-4AB3-8E6D-4CF927E12C34}|GetCOMPortInfo\\GetCOMPortInfo.csproj|solutionrelative:getcomportinfo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -40,11 +40,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "U:\\Users\\hara\\Dev\\Projects\\VS2022\\GetCOMPortInfo\\GetCOMPortInfo\\Program.cs",
+              "DocumentMoniker": "U:\\Users\\hara\\Dev\\ZemiLib\\unified-repo\\GetCOMPortInfo\\GetCOMPortInfo\\Program.cs",
               "RelativeDocumentMoniker": "GetCOMPortInfo\\Program.cs",
-              "ToolTip": "U:\\Users\\hara\\Dev\\Projects\\VS2022\\GetCOMPortInfo\\GetCOMPortInfo\\Program.cs",
+              "ToolTip": "U:\\Users\\hara\\Dev\\ZemiLib\\unified-repo\\GetCOMPortInfo\\GetCOMPortInfo\\Program.cs",
               "RelativeToolTip": "GetCOMPortInfo\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-14T06:37:56.405Z",
               "EditorCaption": ""
