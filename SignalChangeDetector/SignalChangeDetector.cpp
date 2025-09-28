@@ -12,7 +12,15 @@ void SignalChangeDetector::Update()
 void SignalChangeDetector::Input(int x)
 {
     updateFlag_ = true;
-    currentValue_ = x;
+    
+    if(threshold_ == -1)
+        currentValue_ = x;
+    else
+        if(x > threshold_)
+            currentValue_ = 1;
+        else
+            currentValue_ = 0;
+
     if (currentValue_ != previousValue_)
         status_ = !status_;
 }

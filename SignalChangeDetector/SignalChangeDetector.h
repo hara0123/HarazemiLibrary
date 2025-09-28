@@ -8,17 +8,21 @@ class SignalChangeDetector
     bool status_; // 値が変化する度にtrue/falseがトグルする
     bool updateFlag_;
 
-public:
-    SignalChangeDetector()
-    {
-        previousValue_ = 1;
-        status_ = false; // 初期値はOFF
-    }
+    int threshold_;
 
-    SignalChangeDetector(int firstValue, bool status = false)
+public:
+    SignalChangeDetector(int firstValue = 1)
     {
         previousValue_ = firstValue;
-        status_ = status;
+        status_ = false; // 初期値はOFF
+        threshold_ = -1;
+    }
+
+    SignalChangeDetector(int threshold, int firstValue)
+    {
+        previousValue_ = firstValue;
+        status_ = false;
+        threshold_ = threshold;
     }
 
     void Update();
