@@ -66,6 +66,8 @@ public class SerialHandler : MonoBehaviour
     {
         serialPort_ = new SerialPort(portName, bitRate, Parity.None, 8, StopBits.One);
 
+        serialPort_.NewLine = "\n"; // 行の最後に改行をつける設定
+
         serialPort_.RtsEnable = true;
         serialPort_.DtrEnable = true;
 
@@ -111,6 +113,16 @@ public class SerialHandler : MonoBehaviour
             {
                 message_ = serialPort_.ReadLine(); // 改行付きデータが送られる前提
                 isNewMessageReceived_ = true;
+
+                /* 69行目の変更の代わりにこちらでも可　この場合その時にバッファにあるものすべて読むのでずれに注意
+                string raw = serialPort_.ReadExisting();
+
+                if (!string.IsNullOrEmpty(raw))
+                {
+                    message_ = raw;
+                    isNewMessageReceived_ = true;
+                }
+                */
             }
             catch (TimeoutException)
             {
