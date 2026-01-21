@@ -14,8 +14,20 @@ class Program
 {
     [SupportedOSPlatform("windows")] // .NETはクロスプラットフォーム対応のため、これがないとWindows専用の関数を呼んでいる場合に警告が出る
 
-    static void Main()
+    static void Main(string[] args)
     {
+        bool dummyMode;
+        if (args.Length == 1 && args[0] == "test")
+        {
+            // 引数が1個で、引数が"test"の場合は動作確認用モードとして扱う
+            dummyMode = true;
+        }
+        else
+        {
+            // 引数が0個の他に引数が2個以上の場合も通常モードとして扱う
+            dummyMode = false;
+        }
+
         // Unityと連携させるためにUTF8で出力
         // SJISではエディタ上で動いてもビルドした先では動かない
         Console.OutputEncoding = Encoding.UTF8;
@@ -50,16 +62,35 @@ class Program
             }
         }
 
-        foreach (var port in ports)
+        // コンソールに出力、dummyMode_がfalseであれば読み取ったCOMポートの情報を出力
+        if (!dummyMode)
         {
-            if (map.TryGetValue(port, out string? devName))
+            foreach (var port in ports)
             {
-                Console.WriteLine($"N{port}\nD{devName}");
+                if (map.TryGetValue(port, out string? devName))
+                {
+                    Console.WriteLine($"N{port}\nD{devName}");
+                }
+                else
+                {
+                    Console.WriteLine($"{port}\nデバイス情報なし");
+                }
             }
-            else
-            {
-                Console.WriteLine($"{port}\nデバイス情報なし");
-            }
+        }
+        else
+        {
+            // COMポートを利用したアプリの動作確認用のモード
+            DummyOutput();
+        }
+    }
+
+    static void DummyOutput()
+    {
+        int n = 10;
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine("NCOM{0}", i);
+            Console.WriteLine("D通信ポート（COM{0}）", i);
         }
     }
 }
