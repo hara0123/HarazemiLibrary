@@ -1,6 +1,6 @@
 ﻿// Unityでシリアル通信を制御するクラス
 // 例えば空のGameObjectを作り、そこにアタッチする
-// 2025_10月Ver.
+// 2026_9月Ver.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ public class SerialHandler : MonoBehaviour
 
     // COM10以上は\\\\.\\を付加しないと開けない。
     // portNameに直接代入すると失敗するので、ここでいったん別の変数に代入し、AwakeでportNameに代入
-	// myPortNameが空文字列であればOpenを呼ばない＝デバイスがなくてもアプリケーションを実行することができる
+    // myPortNameが空文字列であればOpenを呼ばない＝デバイスがなくてもアプリケーションを実行することができる
     string myPortName = "\\\\.\\COM4";
     public int bitRate = 115200;
 
@@ -64,19 +64,28 @@ public class SerialHandler : MonoBehaviour
 
     private void Open()
     {
-        serialPort_ = new SerialPort(portName, bitRate, Parity.None, 8, StopBits.One);
+        try
+        {
+            serialPort_ = new SerialPort(portName, bitRate, Parity.None, 8, StopBits.One);
 
-        serialPort_.NewLine = "\n"; // 行の最後に改行をつける設定
+            serialPort_.NewLine = "\n"; // 行の最後に改行をつける設定
 
-        serialPort_.RtsEnable = true;
-        serialPort_.DtrEnable = true;
+            serialPort_.RtsEnable = true;
+            serialPort_.DtrEnable = true;
 
-        serialPort_.Open();
+            serialPort_.Open();
 
-        isRunning_ = true;
+            isRunning_ = true;
 
-        thread_ = new Thread(Read);
-        thread_.Start();
+            thread_ = new Thread(Read);
+            thread_.Start();
+        }
+        catch (Exception e)
+        {
+            isRunning_ = false;
+
+            Debug.LogError("from SerialHandler.cs Open():" + e.Message);
+        }
     }
 
     private void Close()
