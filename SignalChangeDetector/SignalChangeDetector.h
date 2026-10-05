@@ -11,14 +11,14 @@ class SignalChangeDetector
     int threshold_;
 
 public:
-    SignalChangeDetector(int firstValue = 1)
+    SignalChangeDetector(int firstValue = 1) : updateFlag_(false), currentValue_(firstValue)
     {
         previousValue_ = firstValue;
         status_ = false; // 初期値はOFF
         threshold_ = -1;
     }
 
-    SignalChangeDetector(int threshold, int firstValue)
+    SignalChangeDetector(int threshold, int firstValue) : updateFlag_(false), currentValue_(firstValue)
     {
         previousValue_ = firstValue;
         status_ = false;
